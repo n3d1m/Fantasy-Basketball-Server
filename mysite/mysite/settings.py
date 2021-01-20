@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'st7983_Fantasy-Basketball-Tracker',
+        'USER': 'st7983_n3d1m',
+        'PASSWORD': 'H2@geomatics',
+        'HOST': 'storage1300.is.cc',
+        'PORT': '3306',
+
     }
 }
 
