@@ -14,6 +14,18 @@ class Hero(models.Model):
         return self.name
 
 
+class Users(models.Model):
+    user_id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=25, blank=True, null=True)
+    email = models.CharField(max_length=25)
+    password = models.CharField(max_length=30)
+    swid = models.CharField(max_length=100)
+    espn_s2 = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user_id
+
+
 # class Cookies(models.Model):
 
 #     try:

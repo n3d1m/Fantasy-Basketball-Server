@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Hero
+from .models import Hero, Users
 
 
 class HeroSerializer(serializers.HyperlinkedModelSerializer):
@@ -9,7 +9,7 @@ class HeroSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'name', 'alias')
 
 
-# class CookieSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Cookies
-#         fields = ('id', 'return_val')
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Users
+        fields = ('user_id', 'name', 'email', 'password', 'swid', 'espn_s2')

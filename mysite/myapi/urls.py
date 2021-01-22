@@ -4,6 +4,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'heroes', views.HeroViewSet)
+router.register(r'users', views.UsersViewSet)
 #router.register(r'cookies', views.CookieSerializer)
 
 # Wire up our API using automatic URL routing.

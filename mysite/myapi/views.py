@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from django.shortcuts import render
-from .serializers import HeroSerializer
-from .models import Hero
+from .serializers import HeroSerializer, UserSerializer
+from .models import Hero, Users
 from django.http import HttpResponse
 import os
 import time
@@ -13,6 +13,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 class HeroViewSet(viewsets.ModelViewSet):
     queryset = Hero.objects.all().order_by('name')
     serializer_class = HeroSerializer
+
+
+class UsersViewSet(viewsets.ModelViewSet):
+    queryset = Users.objects.all().order_by('user_id')
+    serializer_class = UserSerializer
 
 
 def test(request):
